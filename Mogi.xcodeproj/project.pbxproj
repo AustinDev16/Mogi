@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FAC38A6720083356009790A6 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAC38A6620083356009790A6 /* main.cpp */; };
+		FAC38A6F200837E4009790A6 /* MogiPoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAC38A6D200837E4009790A6 /* MogiPoint.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		FAC38A6320083356009790A6 /* Mogi */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Mogi; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC38A6620083356009790A6 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		FAC38A6D200837E4009790A6 /* MogiPoint.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MogiPoint.cpp; sourceTree = "<group>"; };
+		FAC38A6E200837E4009790A6 /* MogiPoint.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MogiPoint.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				FAC38A6620083356009790A6 /* main.cpp */,
+				FAC38A6D200837E4009790A6 /* MogiPoint.cpp */,
+				FAC38A6E200837E4009790A6 /* MogiPoint.hpp */,
 			);
 			path = Mogi;
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAC38A6F200837E4009790A6 /* MogiPoint.cpp in Sources */,
 				FAC38A6720083356009790A6 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
