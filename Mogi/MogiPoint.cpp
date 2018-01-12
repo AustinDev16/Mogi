@@ -25,7 +25,7 @@ double MogiPoint::calculateDeformation(double deltaP, double x, double y) {
 
 // Private
 double MogiPoint::mogiPointEngine(double k, double dP) {
-    assert(k > 0);
+    assert(k >= 0);
     MogiPointConfig c = configuration;
     return ( ((1-c.poissonRatio) * dP * pow(c.chamberRadius, 3.0) )/(c.mu) ) * ((c.chamberCenterDepth)/(pow((pow(k, 2.0) + pow(c.chamberCenterDepth, 2.0)), 1.5)));
 }
