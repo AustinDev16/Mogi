@@ -9,17 +9,21 @@
 #include "SolutionController.hpp"
 // using namespace std;
 // Public
-SolutionController::SolutionController(double poissonRation, double mu, double chamberRadius, double chamberCenterDepth) {
+SolutionController::SolutionController(double poissonRatio, double mu, double chamberRadius, double chamberCenterDepth) {
     MogiPointConfig config = MogiPointConfig();
-    config.poissonRatio = 0.5;
-    config.mu = 1e6;
-    config.chamberRadius = 1;
-    config.chamberCenterDepth = 1e3;
+    config.poissonRatio = poissonRatio;
+    config.mu = mu;
+    config.chamberRadius = chamberRadius;
+    config.chamberCenterDepth = chamberCenterDepth;
     mMogiSource = MogiPoint(config);
 }
 
 double SolutionController::computeSingle(double dP, double radialDistance) {
     return mMogiSource.calculateDeformation(dP, radialDistance);
+}
+
+double SolutionController::computeSingle(double dP, double x, double y) {
+    return mMogiSource.calculateDeformation(dP, x, y);
 }
 
 vector<double> SolutionController::computeRadialArray(double dP, vector<double> radialArray) {

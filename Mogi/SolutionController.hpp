@@ -19,6 +19,7 @@ private:
 public:
     SolutionController(double poissonRatio, double mu, double chamberRadius, double chamberCenterDepth);
     double computeSingle(double dP, double radialDistance);
+    double computeSingle(double dP, double x, double y);
     vector<double> computeRadialArray(double dP, vector<double> radialDistanceArray);
     vector<double> computeXYGrid(double dP, vector<double> xGrid, vector<double> yGrid);
     void formatForPlotting1D();

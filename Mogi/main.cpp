@@ -8,10 +8,12 @@
 
 #include <iostream>
 #include "MogiPoint.hpp"
+#include "SolutionController.hpp"
 using namespace std;
 
 int main(int argc, const char * argv[]) {
     
+    // Example with pointers and individual classes.
     MogiPointConfig *config = new MogiPointConfig;
     config->chamberCenterDepth = 4e3;
     config->chamberRadius = 500;
@@ -30,6 +32,18 @@ int main(int argc, const char * argv[]) {
     
     delete config;
     delete mogiSource;
+    
+    // Example using a helper class
+    
+    double poissonRatio = 0.5;
+    double mu = 1e6;
+    double chamberRadius = 500;
+    double chamberDepth = 4e3;
+    SolutionController solControl = SolutionController(poissonRatio, mu, chamberRadius, chamberDepth);
+    
+    cout << "Value3: " << solControl.computeSingle(5e6, 5) << endl;
+    
+    cout << "Value 4: " << solControl.computeSingle(5e6, 30, 4) << endl;
     
     return 0;
 }
