@@ -7,7 +7,7 @@
 //
 
 #include "SolutionController.hpp"
-
+// using namespace std;
 // Public
 SolutionController::SolutionController(double poissonRation, double mu, double chamberRadius, double chamberCenterDepth) {
     MogiPointConfig config = MogiPointConfig();
@@ -22,14 +22,14 @@ double SolutionController::computeSingle(double dP, double radialDistance) {
     return mMogiSource.calculateDeformation(dP, radialDistance);
 }
 
-std::vector<double> SolutionController::computeRadialArray(double dP, std::vector<double> radialArray) {
-    std::vector<double> solutionArray(radialArray.size());
+vector<double> SolutionController::computeRadialArray(double dP, vector<double> radialArray) {
+    vector<double> solutionArray(radialArray.size());
     return solutionArray;
 }
 
-std::vector<double> SolutionController::computeXYGrid(double dP, std::vector<double> xGrid, std::vector<double> yGrid) {
+vector<double> SolutionController::computeXYGrid(double dP, vector<double> xGrid, vector<double> yGrid) {
     
-    std::vector<double> solutionArray(0);
+    vector<double> solutionArray(0);
     return solutionArray;
 }
 
