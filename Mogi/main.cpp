@@ -30,5 +30,6 @@ int main(int argc, const char * argv[]) {
     
     delete config;
     delete mogiSource;
+    
     return 0;
 }

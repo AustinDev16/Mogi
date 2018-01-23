@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		FAC38A6720083356009790A6 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAC38A6620083356009790A6 /* main.cpp */; };
 		FAC38A6F200837E4009790A6 /* MogiPoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAC38A6D200837E4009790A6 /* MogiPoint.cpp */; };
+		FAC38A7220086A1C009790A6 /* SolutionController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAC38A7020086A1C009790A6 /* SolutionController.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		FAC38A6620083356009790A6 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		FAC38A6D200837E4009790A6 /* MogiPoint.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MogiPoint.cpp; sourceTree = "<group>"; };
 		FAC38A6E200837E4009790A6 /* MogiPoint.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MogiPoint.hpp; sourceTree = "<group>"; };
+		FAC38A7020086A1C009790A6 /* SolutionController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SolutionController.cpp; sourceTree = "<group>"; };
+		FAC38A7120086A1C009790A6 /* SolutionController.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SolutionController.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +63,8 @@
 		FAC38A6520083356009790A6 /* Mogi */ = {
 			isa = PBXGroup;
 			children = (
+				FAC38A7020086A1C009790A6 /* SolutionController.cpp */,
+				FAC38A7120086A1C009790A6 /* SolutionController.hpp */,
 				FAC38A6620083356009790A6 /* main.cpp */,
 				FAC38A6D200837E4009790A6 /* MogiPoint.cpp */,
 				FAC38A6E200837E4009790A6 /* MogiPoint.hpp */,
@@ -124,6 +129,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAC38A7220086A1C009790A6 /* SolutionController.cpp in Sources */,
 				FAC38A6F200837E4009790A6 /* MogiPoint.cpp in Sources */,
 				FAC38A6720083356009790A6 /* main.cpp in Sources */,
 			);

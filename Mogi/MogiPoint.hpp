@@ -25,6 +25,7 @@ private:
     double mogiPointEngine(double k, double dP);
     double convertCartesianToRadial(double x, double y);
 public:
+    MogiPoint();
     MogiPoint(MogiPointConfig config);
     double calculateDeformation(double deltaP, double radialDistance);
     double calculateDeformation(double deltaP, double x, double y);

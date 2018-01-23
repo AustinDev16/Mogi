@@ -13,6 +13,15 @@ MogiPoint::MogiPoint(MogiPointConfig config) {
     configuration = config;
 }
 
+MogiPoint::MogiPoint() {
+    MogiPointConfig config = MogiPointConfig();
+    config.poissonRatio = 0.5;
+    config.mu = 1e6;
+    config.chamberRadius = 1;
+    config.chamberCenterDepth = 1e3;
+    configuration = config;
+}
+
 double MogiPoint::calculateDeformation(double deltaP, double radialDistance) {
     double value = mogiPointEngine(radialDistance, deltaP);
     return value;
