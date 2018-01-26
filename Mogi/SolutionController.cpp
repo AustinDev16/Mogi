@@ -15,10 +15,17 @@ SolutionController::SolutionController(double poissonRatio, double mu, double ch
     config.mu = mu;
     config.chamberRadius = chamberRadius;
     config.chamberCenterDepth = chamberCenterDepth;
+    config.centerXCoordinate = 0;
+    config.centerYCoordinate = 0;
     mMogiSource = MogiPoint(config);
 }
 
+void SolutionController::setCenterCoordinate(double centerX, double centerY){
+    mMogiSource.setCenterCoordinate(centerX, centerY);
+}
+
 double SolutionController::computeSingle(double dP, double radialDistance) {
+    assert(radialDistance >= 0);
     return mMogiSource.calculateDeformation(dP, radialDistance);
 }
 

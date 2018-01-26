@@ -19,16 +19,24 @@ MogiPoint::MogiPoint() {
     config.mu = 1e6;
     config.chamberRadius = 1;
     config.chamberCenterDepth = 1e3;
+    config.centerXCoordinate = 0;
+    config.centerYCoordinate = 0;
     configuration = config;
 }
 
-double MogiPoint::calculateDeformation(double deltaP, double radialDistance) {
+void MogiPoint::setCenterCoordinate(double centerX, double centerY) {
+    configuration.centerXCoordinate = centerX;
+    configuration.centerYCoordinate = centerY;
+}
+
+double MogiPoint::calculateDeformation(const double deltaP, double radialDistance) {
     double value = mogiPointEngine(radialDistance, deltaP);
     return value;
 }
 
 double MogiPoint::calculateDeformation(double deltaP, double x, double y) {
-    double k = convertCartesianToRadial(x, y);
+    Point sp = sanitizeCartesian(x, y);
+    double k = convertCartesianToRadial(sp.x, sp.y);
     return mogiPointEngine(k, deltaP);
 }
 
@@ -41,4 +49,12 @@ double MogiPoint::mogiPointEngine(double k, double dP) {
 
 double MogiPoint::convertCartesianToRadial(double x, double y) {
     return sqrt(pow(x, 2.0) + pow(y, 2.0));
+}
+
+Point MogiPoint::sanitizeCartesian(double x, double y) {
+    
+    Point sanitizedPoint;
+    sanitizedPoint.x = x - configuration.centerXCoordinate;
+    sanitizedPoint.y = y - configuration.centerYCoordinate;
+    return sanitizedPoint;
 }

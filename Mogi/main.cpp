@@ -62,5 +62,11 @@ int main(int argc, const char * argv[]) {
     cout << "XY Grid test" << endl;
     cout << solControl.computeXYGrid(5e6, grid, grid) << endl;
     
+    // Center coordinate test;
+    solControl.setCenterCoordinate(10, 20);
+//    cout << "Value3: " << solControl.computeSingle(5e6, 5) << endl;
+    
+    cout << "Value 4: " << solControl.computeSingle(5e6, 40, 20) << endl;
+    
     return 0;
 }

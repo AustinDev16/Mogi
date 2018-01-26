@@ -17,6 +17,13 @@ struct MogiPointConfig {
     double mu; //
     double chamberRadius; // a, meters
     double chamberCenterDepth; // d, meters
+    double centerXCoordinate; // meters
+    double centerYCoordinate; // meters
+};
+
+struct Point {
+    double x;
+    double y;
 };
 
 class MogiPoint {
@@ -24,10 +31,12 @@ private:
     MogiPointConfig configuration;
     double mogiPointEngine(double k, double dP);
     double convertCartesianToRadial(double x, double y);
+    Point sanitizeCartesian(double x, double y);
 public:
     MogiPoint();
     MogiPoint(MogiPointConfig config);
     double calculateDeformation(double deltaP, double radialDistance);
     double calculateDeformation(double deltaP, double x, double y);
+    void setCenterCoordinate(double centerX, double centerY);
 };
 #endif /* MogiPoint_hpp */
