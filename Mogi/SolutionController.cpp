@@ -36,9 +36,14 @@ vector<double> SolutionController::computeRadialArray(double dP, vector<double> 
     return solutionArray;
 }
 
-vector<double> SolutionController::computeXYGrid(double dP, vector<double> xGrid, vector<double> yGrid) {
+MatrixXd SolutionController::computeXYGrid(double dP, vector<double> xGrid, vector<double> yGrid) {
     
-    vector<double> solutionArray(0);
+    MatrixXd solutionArray(xGrid.size(), yGrid.size());
+    for (int i = 0; i < xGrid.size(); i++) {
+        for (int j = 0; j < yGrid.size(); j++) {
+            solutionArray(i,j) = mMogiSource.calculateDeformation(dP, xGrid[i], yGrid[j]);
+        }
+    }
     return solutionArray;
 }
 

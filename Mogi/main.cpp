@@ -49,8 +49,8 @@ int main(int argc, const char * argv[]) {
     vector<double> grid(4);
     grid[0] = 0;
     grid[1] = 5.0;
-    grid[2] = 100;
-    grid[3] = 1000;
+    grid[2] = 1e3;
+    grid[3] = 5e3;
     
     vector<double> solution = solControl.computeRadialArray(5e6, grid);
     
@@ -58,6 +58,9 @@ int main(int argc, const char * argv[]) {
     for (int j = 0; j < grid.size(); j++) {
         // cout << grid[j] << ":" << solution[j] << endl;
     }
+    
+    cout << "XY Grid test" << endl;
+    cout << solControl.computeXYGrid(5e6, grid, grid) << endl;
     
     return 0;
 }

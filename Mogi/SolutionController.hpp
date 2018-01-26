@@ -12,6 +12,10 @@
 #include <stdio.h>
 #include "MogiPoint.hpp"
 #include <vector>
+#include <Eigen/Dense>
+using Eigen::MatrixXd;
+using Eigen::Vector2d;
+
 using namespace std;
 class SolutionController {
 private:
@@ -21,7 +25,7 @@ public:
     double computeSingle(double dP, double radialDistance);
     double computeSingle(double dP, double x, double y);
     vector<double> computeRadialArray(double dP, vector<double> radialDistanceArray);
-    vector<double> computeXYGrid(double dP, vector<double> xGrid, vector<double> yGrid);
+    MatrixXd computeXYGrid(double dP, vector<double> xGrid, vector<double> yGrid);
     void formatForPlotting1D();
     void formatForPlotting2D();
 };
