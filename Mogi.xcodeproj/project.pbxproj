@@ -246,6 +246,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QYV5ZZB7LD;
+				"HEADER_SEARCH_PATHS[arch=*]" = "~/Scientific_Libraries/Eigen/334";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -255,6 +256,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QYV5ZZB7LD;
+				"HEADER_SEARCH_PATHS[arch=*]" = "~/Scientific_Libraries/Eigen/334";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
