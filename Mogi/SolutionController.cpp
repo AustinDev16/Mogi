@@ -28,6 +28,11 @@ double SolutionController::computeSingle(double dP, double x, double y) {
 
 vector<double> SolutionController::computeRadialArray(double dP, vector<double> radialArray) {
     vector<double> solutionArray(radialArray.size());
+    
+    for (int i = 0; i < radialArray.size(); i++) {
+        solutionArray[i] = mMogiSource.calculateDeformation(dP, radialArray[i]);
+    }
+    
     return solutionArray;
 }
 

@@ -45,5 +45,19 @@ int main(int argc, const char * argv[]) {
     
     cout << "Value 4: " << solControl.computeSingle(5e6, 30, 4) << endl;
     
+    // Radial Array test
+    vector<double> grid(4);
+    grid[0] = 0;
+    grid[1] = 5.0;
+    grid[2] = 100;
+    grid[3] = 1000;
+    
+    vector<double> solution = solControl.computeRadialArray(5e6, grid);
+    
+    cout << "Grid test" << endl;
+    for (int j = 0; j < grid.size(); j++) {
+        // cout << grid[j] << ":" << solution[j] << endl;
+    }
+    
     return 0;
 }
