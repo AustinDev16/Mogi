@@ -1,0 +1,28 @@
+{
+    "model": {
+        "domain": {
+            "xMin": -5000,
+            "xMax": 5000,
+            "yMin": -5000,
+            "yMax": 5000
+        },
+        "sources": {
+            "chamber1": {
+                "centerX": 0,
+                "centerY": 0,
+                "chamberDepth": 6e3,
+                "chamberRadius": 500,
+                "mu": 1e6,
+                "poissonRatio": 0.25
+            },
+            "chamber2": {
+                "centerX": 750,
+                "centerY": 100,
+                "chamberDepth": 2e3,
+                "chamberRadius": 100,
+                "mu": 1e6,
+                "poissonRatio": 0.25
+            }
+        }
+    }
+}

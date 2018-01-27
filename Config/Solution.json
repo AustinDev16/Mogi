@@ -1,0 +1,34 @@
+{
+    "modelRuns": {
+        "1": {
+            "name": "Model Run 1",
+            "outputFile": "results1",
+            "format": "commaDelimited",
+            "inputModel": "Model.json",
+            "runs": {
+                "dP": {
+                    "chamber1": 5e6,
+                    "chamber2": 3e6
+                }
+            }
+        },
+        "2": {
+            "name": "Model Run 2",
+            "outputFile": "results2",
+            "inputModel": "Model.json",
+            "runs": {
+                "dP": {
+                    "chamber1": 10e6,
+                    "chamber2": 6e6
+                }
+            }
+        }
+    },
+    "plotting": {
+        "matlab": false,
+        "tikz": true
+    },
+    "options": {
+        "version": 0.0
+    }
+}
